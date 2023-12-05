@@ -27,7 +27,10 @@ results/figure/sierra.png : scripts/plotcount.py results/sierra.dat
 report/_build/html/index.html : report/count_report.ipynb \
 report/_toc.yml \
 report/_config.yml \
-results/figure/isles.png 
+results/figure/isles.png \
+results/figure/abyss.png \
+results/figure/last.png \
+results/figure/sierra.png
 	jupyter-book build report
 
 clean:
