@@ -15,6 +15,15 @@ results/sierra.dat : scripts/wordcount.py data/sierra.txt
 results/figure/isles.png : scripts/plotcount.py results/isles.dat
 	python scripts/plotcount.py --input_file=results/isles.dat --output_file=results/figure/isles.png
 
+results/figure/abyss.png : scripts/plotcount.py results/abyss.dat
+	python scripts/plotcount.py --input_file=results/abyss.dat --output_file=results/figure/abyss.png
+
+results/figure/last.png : scripts/plotcount.py results/last.dat
+	python scripts/plotcount.py --input_file=results/last.dat --output_file=results/figure/last.png
+
+results/figure/sierra.png : scripts/plotcount.py results/sierra.dat
+	python scripts/plotcount.py --input_file=results/sierra.dat --output_file=results/figure/sierra.png
+
 report/_build/html/index.html : report/count_report.ipynb \
 report/_toc.yml \
 report/_config.yml \
@@ -23,5 +32,11 @@ results/figure/isles.png
 
 clean:
 	rm -f results/isles.dat
+	rm -f results/abyss.dat
+	rm -f results/last.dat
+	rm -f results/sierra.dat
 	rm -f results/figure/isles.png
+	rm -f results/figure/abyss.png
+	rm -f results/figure/last.png
+	rm -f results/figure/sierra.png
 	rm -rf report/_build
